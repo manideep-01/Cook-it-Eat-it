@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F6F0"
+    tools:context=".SearchActivity">
+
+    <EditText
+        android:id="@+id/go_back_search"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/search_view_bg"
+        android:ems="10"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Search recipe"
+        android:inputType="text"
+        android:paddingStart="50dp"
+        android:textColor="@color/black"
+        android:textColorHint="#5A5858"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/go_back_home"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:clickable="true"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/go_back_search"
+        app:layout_constraintStart_toStartOf="@+id/go_back_search"
+        app:layout_constraintTop_toTopOf="@+id/go_back_search"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/search_rv_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go_back_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
